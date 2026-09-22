@@ -1,1 +1,16 @@
+# StegoRSA — Cryptoghraphy
+Difficulty: easy
+Tools: exiftool, Cyberchef, openssl
 
+What I was given: An encrypted flag file and an image
+What worked: Finding hidden message in the image and using it to decrypt the flag
+Steps: 
+  1. Download the files
+  2. Open an online Exiftool
+  3. Insert the image into the exiftool and copy the file comment in the meta data section
+  4. Paste the file comment into CyberChef and convert it from HEX
+  5. Copy the decoded RSA key to a file
+  6. use openssl to decrypt the encrypted file using the RSA key (openssl pkeyutl -decrypt -inkey RSAkey.pem -in flag.enc -out flag.txt)
+Things I learned: 
+  1. Hidden data can be hid inside "innocent" looking file
+  2. How to use openssl to decrypt file and messages
