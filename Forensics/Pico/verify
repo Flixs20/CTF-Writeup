@@ -2,7 +2,13 @@
 Difficulty: easy
 Tools: linux checksum
 
-What I was given: SSH connection and a hash used for checksum
+What I was given: SSH connection, a hash used for checksum, and a command used to decrypt the flag
 What worked: comparing the given checksum to a list of files and decrypt the flag using the file that matches
-Steps: (numbered list — what you did, in order, so future-you can retrace it)
+Steps: 
+  1. Login to the given ssh connection
+  2. Identify the hash as SHA 256
+  3. Use the command "find /path/to/files -type f -exec SHA256sum {} \; > checksums.txt" 
+to compare all the files in the given directory with the checksum
+  4. After it is found use the command given to decrypt the flag
 Things I learned: 
+  1. How to use linux terminal to perform a checksum for files
