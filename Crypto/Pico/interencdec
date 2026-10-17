@@ -1,6 +1,7 @@
 # interencdec — Cryptoghraphy
 Difficulty: easy
 Tools: linux "cat", online decoder (cyberchef)
+Vulnerability: Encrypting Information with Crackable Algorithm
 
 What I was given: A file with no file extension. Little to no intructions
 What worked: Decoding the file twice and using further decipher it using ceaser cipcher
