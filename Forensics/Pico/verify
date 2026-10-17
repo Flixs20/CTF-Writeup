@@ -1,6 +1,7 @@
 # verify — Forensics
 Difficulty: easy
 Tools: linux checksum
+Vulnerability: None
 
 What I was given: SSH connection, a hash used for checksum, and a command used to decrypt the flag
 What worked: comparing the given checksum to a list of files and decrypt the flag using the file that matches
