@@ -1,6 +1,7 @@
 # StegoRSA — Cryptoghraphy
 Difficulty: easy
 Tools: exiftool, Cyberchef, openssl
+Vulnerability: Disclosure of Sensitive Information via Metadata & Weak Encryption Technique
 
 What I was given: An encrypted flag file and an image
 What worked: Finding hidden message in the image and using it to decrypt the flag
