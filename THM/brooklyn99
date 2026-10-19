@@ -1,0 +1,20 @@
+# Brooklyn99 — Recon & Priv Esc
+Difficulty: easy
+Tools: nmap & hydra & GTFObin
+Vulnerability: Misconfigured sudo Permisions & Weak Password Implementation & Allowing Anonymous User on FTP
+
+What I was given: A website and a set of flags to recover
+What worked: Using hydra to bruteforce a user password on ssh
+Steps: 
+  1. Using nmap to see the open ports: SSH, FTP & HTTP
+  2. Log in FTP as anonymous
+  3. Search the FTP server for clues which reveals a note named 'note_to_jake.txt' which suggest a user with name "jake" with weak password implementation
+  4. Use hydra to bruteforce the login for SSH
+  5. Log in to the SSH and check allowed commands on sudo (command 'less' does not need a password)
+  6. Use "less" on any file and input !/bin/bash and press enter to spawn the root shell
+  7. Enumerate the place which will uncover the USER flag located in 'holt/user.txt' andthe ROOT flag located in '/root/root.txt'
+  8. Submit the given flags
+Things I learned: 
+  1. Basic priv esc using misconfigured sudo permisions
+  2. Exploiting FTP misconfiguration using an anonymous account
+  3. Using hydra to bruteforce a weak account password
